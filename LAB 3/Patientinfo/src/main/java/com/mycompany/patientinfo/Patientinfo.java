@@ -1,22 +1,28 @@
 
+
 package com.mycompany.patientinfo;
 import java.util.Scanner;
 
-public class Patientinfo {
+public class PatientInfo {
+
     String pNumber, pName, pEmail, pContact, pComplain;
     int pAge;
     double pBill;
 
-public void patient_Data(){
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Enter patient`s name: ");
-    pName = sc.nextLine();
-    System.out.println("Enter patient`s number: ");
-    pNumber = sc.nextLine();
-    System.out.print("Enter Patient Age: ");
+    // Method to take patient's data
+    public void Take_Patient_data() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Patient Number: ");
+        pNumber = sc.nextLine();
+
+        System.out.print("Enter Patient Name: ");
+        pName = sc.nextLine();
+
+        System.out.print("Enter Patient Age: ");
         pAge = sc.nextInt();
-        sc.nextLine();
-System.out.print("Enter Patient Email: ");
+        sc.nextLine();  
+        System.out.print("Enter Patient Email: ");
         pEmail = sc.nextLine();
 
         System.out.print("Enter Patient Contact: ");
@@ -27,27 +33,26 @@ System.out.print("Enter Patient Email: ");
 
         System.out.print("Enter Patient Bill: ");
         pBill = sc.nextDouble();
+    }
 
-        
-}
-    public void patient_Data_Print(){
-        
+    // Method to print the receipt
+    public void Print_Receipt() {
         System.out.println("\n---- Patient Receipt ----");
-                  
-        System.out.println("Patient Name: " + pName);
         System.out.println("Patient Number: " + pNumber);
+        System.out.println("Patient Name: " + pName);
         System.out.println("Patient Age: " + pAge);
         System.out.println("Patient Email: " + pEmail);
         System.out.println("Patient Contact: " + pContact);
         System.out.println("Patient Complain: " + pComplain);
         System.out.println("Total Bill: $" + pBill);
         System.out.println("-------------------------");
+    }
 
-        
-    }
     public static void main(String[] args) {
-       Patientinfo hr = new Patientinfo();
-       hr.patient_Data();
-       hr.patient_Data_Print();
+        PatientInfo hr = new  PatientInfo();
+        hr.Take_Patient_data();
+        hr.Print_Receipt();
     }
+  
 }
+
