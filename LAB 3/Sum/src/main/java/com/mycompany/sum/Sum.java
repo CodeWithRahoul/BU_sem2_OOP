@@ -38,10 +38,10 @@ public static int ComputeOddSum(int input) {
             if (number < 0) {
                 System.out.println("Exiting program.");
                 break;
-            }
+    }
 
             System.out.println("Sum of odd numbers less than " + number + ": " + ComputeOddSum(number));
             System.out.println("Sum of even numbers less than " + number + ": " + ComputeEvenSum(number));
-        }
+}
     }
 }
