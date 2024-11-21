@@ -1,12 +1,13 @@
 package org.example;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-class TaskInterval {
+class Main {
     private int startHour, startMinute, endHour, endMinute;
 
-    public TaskInterval(int startHour, int startMinute, int endHour, int endMinute) {
+    public Main(int startHour, int startMinute, int endHour, int endMinute) {
         this.startHour = startHour;
         this.startMinute = startMinute;
         this.endHour = endHour;
